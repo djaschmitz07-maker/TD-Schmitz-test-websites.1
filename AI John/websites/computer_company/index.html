@@ -1,0 +1,1207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Computer Company - Home</title><style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0078d4;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: #555;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #0078d4;
+            border-bottom: 2px solid #0078d4;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2f7 0%, #cce7f0 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 56px;
+            color: #005a9e;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 40px;
+            max-width: 700px;
+            font-weight: 300;
+        }
+        .hero-button {
+            background-color: #0078d4;
+            color: #ffffff;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 19px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 20px rgba(0, 120, 212, 0.3);
+        }
+        .hero-button:hover {
+            background-color: #005a9e;
+            transform: translateY(-3px);
+        }
+        .hero-3d-model-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background-color: #e0e0e0; /* Placeholder for 3D model */
+            margin: 40px auto 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+        .hero-3d-model-container::before {
+            content: 'Interactive 3D Computer Model Here';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #888;
+            font-size: 24px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        /* This is where a JavaScript library like Three.js would render the 3D model */
+        /* For example: <canvas id="threeJsCanvas" style="width:100%; height:100%;"></canvas> */
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section:nth-of-type(even) {
+            background-color: #f9fbfd;
+        }
+        .section h2 {
+            font-size: 42px;
+            color: #005a9e;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .section p {
+            font-size: 19px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .grid-3-cols {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .feature-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #0078d4;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .feature-card h3 {
+            font-size: 24px;
+            color: #005a9e;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .feature-card p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 0;
+            max-width: none; /* Override section p max-width */
+        }
+        .icon {
+            font-size: 48px;
+            color: #0078d4;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(45deg, #0078d4 0%, #005a9e 100%);
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 48px;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        .cta-section p {
+            color: #e0e0e0;
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+        .cta-button {
+            background-color: #ffffff;
+            color: #0078d4;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #f0f0f0;
+            color: #005a9e;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 50px 0;
+            font-size: 15px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #0078d4;
+        }
+        .footer-col p {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ccc;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #0078d4;
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 30px;
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+            .hero p {
+                font-size: 20px;
+            }
+            .section h2 {
+                font-size: 36px;
+            }
+            .cta-section h2 {
+                font-size: 40px;
+            }
+            .grid-3-cols {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            .hero-3d-model-container {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: none;
+            }
+            .nav-links a:hover, .nav-links a.active {
+                border-bottom: none;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .hero-3d-model-container {
+                height: 300px;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .section h2 {
+                font-size: 32px;
+            }
+            .section p {
+                font-size: 17px;
+            }
+            .cta-section {
+                padding: 60px 0;
+            }
+            .cta-section h2 {
+                font-size: 36px;
+            }
+            .cta-section p {
+                font-size: 19px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-col {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .footer-col ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-links {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .hero-button {
+                padding: 12px 25px;
+                font-size: 17px;
+            }
+            .hero-3d-model-container {
+                height: 250px;
+                font-size: 18px;
+            }
+            .hero-3d-model-container::before {
+                font-size: 18px;
+            }
+            .section h2 {
+                font-size: 28px;
+            }
+            .feature-card h3 {
+                font-size: 20px;
+            }
+            .feature-card p {
+                font-size: 15px;
+            }
+            .cta-section h2 {
+                font-size: 30px;
+            }
+            .cta-section p {
+                font-size: 17px;
+            }
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+    </style></head><body><header><div class="container navbar"><a href="index.html" class="logo">WindowsTech</a><nav><ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About Windows</a></li><li><a href="services.html">Services</a></li><li><a href="#">Contact</a></li></ul></nav></div></header><main><section class="hero"><div class="container" style="text-align: center;"><h1 style="margin-bottom: 20px;">Experience the Power of Windows</h1><p style="margin-bottom: 40px;">Discover cutting-edge technology, seamless performance, and endless possibilities with our range of Windows computers.</p><a href="#explore" class="hero-button">Explore Our Computers</a><div class="hero-3d-model-container" id="threeJsContainer">
+                <!-- Placeholder for the interactive 3D computer model -->
+                <!-- A JavaScript library like Three.js would render the model here. -->
+                <!-- Example: <canvas id="computerCanvas" style="width:100%; height:100%; display:block;"></canvas> -->
+            </div></div></section><section class="section" id="explore"><div class="container"><h2 style="margin-bottom: 20px;">Why Choose Windows?</h2><p style="margin-bottom: 60px;">Windows operating system powers billions of devices worldwide, offering unparalleled versatility, robust security, and a vast ecosystem of software and hardware.</p><div class="grid-3-cols"><div class="feature-card"><span class="icon">🚀</span><h3>Unmatched Performance</h3><p>Experience lightning-fast boot times, smooth multitasking, and powerful processing for all your demanding applications and games.</p></div><div class="feature-card"><span class="icon">💡</span><h3>Innovative Features</h3><p>From intuitive user interfaces to advanced AI capabilities, Windows constantly evolves to bring you the latest in computing innovation.</p></div><div class="feature-card"><span class="icon">🛡️</span><h3>Robust Security</h3><p>Stay protected with built-in security features like Windows Defender, BitLocker, and regular updates that keep your data safe.</p></div><div class="feature-card"><span class="icon">🎮</span><h3>Gaming Excellence</h3><p>Dive into the world of PC gaming with DirectX 12 Ultimate, Xbox Game Pass integration, and support for the latest graphics hardware.</p></div><div class="feature-card"><span class="icon">💼</span><h3>Productivity Powerhouse</h3><p>Boost your workflow with seamless integration of Microsoft Office, collaborative tools, and a wide array of professional software.</p></div><div class="feature-card"><span class="icon">🌐</span><h3>Vast Ecosystem</h3><p>Enjoy compatibility with an extensive range of hardware peripherals and software applications, giving you ultimate flexibility.</p></div></div></div></section><section class="cta-section"><div class="container"><h2 style="margin-bottom: 25px;">Ready to Upgrade Your Computing Experience?</h2><p style="margin-bottom: 40px;">Explore our curated selection of Windows computers, designed to meet every need from professional workstations to high-performance gaming rigs.</p><a href="about.html" class="cta-button">Learn More About Windows</a></div></section></main><footer><div class="container footer-content"><div class="footer-col"><h3>WindowsTech</h3><p>Your gateway to the world of powerful and reliable Windows computing solutions.</p><div class="social-links"><a href="#" aria-label="Facebook">F</a><a href="#" aria-label="Twitter">T</a><a href="#" aria-label="Instagram">I</a><a href="#" aria-label="LinkedIn">L</a></div></div><div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Windows</a></li><li><a href="services.html">Our Services</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-col"><h3>Support</h3><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Warranty Information</a></li><li><a href="#">Privacy Policy</a></li></ul></div><div class="footer-col"><h3>Contact Us</h3><p>Email: info@windowstech.com</p><p>Phone: +1 (555) 123-4567</p><p>Address: 123 Tech Lane, Innovation City, PC 90210</p></div></div><div class="footer-bottom"><p>&copy; 2023 WindowsTech. All rights reserved.</p></div></footer></body></html><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Computer Company - About Windows</title><style>
+        /* Global Styles (Copied from index.html for consistency) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0078d4;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: #555;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #0078d4;
+            border-bottom: 2px solid #0078d4;
+        }
+
+        /* Hero Section for About Page */
+        .about-hero {
+            background: linear-gradient(135deg, #d0e8f2 0%, #a7d9ed 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: #005a9e;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .about-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+        .about-hero p {
+            font-size: 22px;
+            color: #333;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            text-align: left;
+        }
+        .content-section:nth-of-type(even) {
+            background-color: #f9fbfd;
+        }
+        .content-section h2 {
+            font-size: 42px;
+            color: #005a9e;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .content-section h3 {
+            font-size: 32px;
+            color: #0078d4;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .content-section ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+        .content-section ul li {
+            margin-bottom: 10px;
+        }
+        .content-section strong {
+            color: #005a9e;
+            font-weight: 600;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 50px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #0078d4;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .timeline-item-content {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            border-top: 3px solid #0078d4;
+        }
+        .timeline-item-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .timeline-item:nth-child(even) .timeline-item-content::after {
+            right: -10px;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #0078d4;
+        }
+        .timeline-item:nth-child(odd) .timeline-item-content::after {
+            left: -10px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #0078d4 transparent transparent;
+        }
+        .timeline-item-date {
+            width: 10%;
+            text-align: center;
+            font-weight: 700;
+            color: #005a9e;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-item-date::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #0078d4;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            z-index: 1;
+        }
+        .timeline-item-content h4 {
+            font-size: 24px;
+            color: #005a9e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .timeline-item-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Footer (Copied from index.html for consistency) */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 50px 0;
+            font-size: 15px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #0078d4;
+        }
+        .footer-col p {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ccc;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #0078d4;
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 30px;
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-hero h1 {
+                font-size: 48px;
+            }
+            .about-hero p {
+                font-size: 20px;
+            }
+            .content-section h2 {
+                font-size: 36px;
+            }
+            .content-section h3 {
+                font-size: 28px;
+            }
+            .content-section p, .content-section ul {
+                font-size: 17px;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .timeline-item:nth-child(odd) {
+                flex-direction: column;
+            }
+            .timeline-item-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            .timeline-item-content::after {
+                left: -10px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #0078d4 transparent transparent;
+            }
+            .timeline-item-date {
+                width: auto;
+                text-align: left;
+                margin-left: 60px;
+                margin-bottom: 10px;
+            }
+            .timeline-item-date::before {
+                left: -40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: none;
+            }
+            .nav-links a:hover, .nav-links a.active {
+                border-bottom: none;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+            .about-hero {
+                padding: 60px 0;
+            }
+            .about-hero h1 {
+                font-size: 40px;
+            }
+            .about-hero p {
+                font-size: 18px;
+            }
+            .content-section {
+                padding: 60px 0;
+            }
+            .content-section h2 {
+                font-size: 32px;
+            }
+            .content-section h3 {
+                font-size: 26px;
+            }
+            .content-section p, .content-section ul {
+                font-size: 16px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-col {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .footer-col ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-links {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 32px;
+            }
+            .about-hero p {
+                font-size: 16px;
+            }
+            .content-section h2 {
+                font-size: 28px;
+            }
+            .content-section h3 {
+                font-size: 22px;
+            }
+            .content-section p, .content-section ul {
+                font-size: 15px;
+            }
+            .timeline-item-content {
+                padding: 15px;
+            }
+            .timeline-item-content h4 {
+                font-size: 20px;
+            }
+            .timeline-item-content p {
+                font-size: 14px;
+            }
+        }
+    </style></head><body><header><div class="container navbar"><a href="index.html" class="logo">WindowsTech</a><nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About Windows</a></li><li><a href="services.html">Services</a></li><li><a href="#">Contact</a></li></ul></nav></div></header><main><section class="about-hero"><div class="container"><h1 style="margin-bottom: 20px;">The World of Windows Computers</h1><p>Dive deep into the history, evolution, and unparalleled capabilities of the operating system that redefined personal computing.</p></div></section><section class="content-section"><div class="container"><h2 style="margin-bottom: 60px;">A Legacy of Innovation: The Windows Journey</h2><div class="timeline"><div class="timeline-item"><div class="timeline-item-date">1985</div><div class="timeline-item-content"><h4>Windows 1.0: The Dawn of Graphical Interfaces</h4><p>Microsoft introduces Windows 1.0, a graphical operating environment for MS-DOS, marking the beginning of a new era for personal computers. It featured a mouse-driven interface, pull-down menus, and tiled windows.</p></div></div><div class="timeline-item"><div class="timeline-item-date">1995</div><div class="timeline-item-content"><h4>Windows 95: The Revolution</h4><p>A monumental release that introduced the Start button, taskbar, and Plug and Play capabilities. Windows 95 brought the internet to the mainstream and became a cultural phenomenon.</p></div></div><div class="timeline-item"><div class="timeline-item-date">2001</div><div class="timeline-item-content"><h4>Windows XP: Stability and Style</h4><p>Known for its vibrant new interface and robust stability, Windows XP became one of the most popular and long-lived versions, widely adopted by both consumers and businesses.</p></div></div><div class="timeline-item"><div class="timeline-item-date">2009</div><div class="timeline-item-content"><h4>Windows 7: Refinement and Performance</h4><p>Building on the success of XP, Windows 7 offered a more streamlined interface, improved performance, and enhanced security, quickly becoming a user favorite.</p></div></div><div class="timeline-item"><div class="timeline-item-date">2015</div><div class="timeline-item-content"><h4>Windows 10: The OS as a Service</h4><p>Microsoft shifted to a "Windows as a Service" model, offering free upgrades and continuous updates. Windows 10 unified the experience across devices and introduced Cortana and Microsoft Edge.</p></div></div><div class="timeline-item"><div class="timeline-item-date">2021</div><div class="timeline-item-content"><h4>Windows 11: A Modern Refresh</h4><p>With a redesigned user interface, centered Start menu, improved multitasking features (Snap Layouts), and enhanced gaming capabilities, Windows 11 brings a fresh, modern look and feel.</p></div></div></div></div></section><section class="content-section" style="background-color: #ffffff;"><div class="container"><h2 style="margin-bottom: 40px;">Why Windows Remains the Global Standard</h2><p>Windows computers offer a unique blend of flexibility, power, and compatibility that makes them indispensable for a vast array of users. Here's what sets them apart:</p><h3>Unparalleled Versatility & Hardware Choice</h3><p>Unlike closed ecosystems, Windows thrives on diversity. You can choose from thousands of hardware configurations from various manufacturers, ensuring you find a computer that perfectly fits your budget, performance needs, and aesthetic preferences. From ultra-portable laptops to powerful gaming desktops and sleek all-in-ones, the choice is yours.</p><h3>Vast Software Ecosystem</h3><p>Windows boasts the largest software library in the world. Whether you're a professional needing specialized engineering software, a creative artist using Adobe Suite, a student relying on Microsoft Office, or a gamer seeking the latest titles, Windows has you covered. Compatibility is rarely an issue.</p><h3>Gaming Prowess</h3><p>For many, Windows is synonymous with PC gaming. With technologies like DirectX 12 Ultimate, native support for high-refresh-rate monitors, and seamless integration with Xbox Game Pass, Windows offers the most robust and diverse gaming platform available. The ability to customize hardware components further enhances the gaming experience.</p><h3>Productivity and Professional Tools</h3><p>Microsoft Office Suite (Word, Excel, PowerPoint, Outlook) is deeply integrated and optimized for Windows, making it the go-to platform for productivity. Advanced features for multitasking, virtual desktops, and robust security protocols like BitLocker make Windows ideal for business and professional environments.</p><h3>Innovation and Future-Proofing</h3><p>Microsoft continuously innovates, integrating AI capabilities (like Copilot in Windows 11), cloud services, and advanced security measures. Regular updates ensure your Windows computer remains secure, efficient, and equipped with the latest features.</p></div></section><section class="content-section"><div class="container"><h2 style="margin-bottom: 40px;">Types of Windows Computers</h2><p>The Windows ecosystem offers a diverse range of computer types, each designed to cater to specific user needs and preferences:</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;"><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 4px solid #0078d4;"><h3>Desktop PCs</h3><p>The traditional powerhouse, offering maximum performance, upgradeability, and customization. Ideal for gaming, video editing, and demanding professional tasks.</p></div><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 44px solid #0078d4;"><h3>Laptops</h3><p>Portable and versatile, ranging from ultra-thin ultrabooks for everyday use to high-performance gaming laptops and mobile workstations for professionals on the go.</p></div><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 4px solid #0078d4;"><h3>2-in-1 Devices</h3><p>Combining the functionality of a laptop with the portability of a tablet. Perfect for creative professionals, students, and anyone needing flexibility.</p></div><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 4px solid #0078d4;"><h3>All-in-One (AIO) PCs</h3><p>Sleek and space-saving, integrating all computer components into the monitor. Great for home offices and users who value minimalist design.</p></div><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 4px solid #0078d4;"><h3>Workstations</h3><p>High-end machines designed for intensive tasks like 3D rendering, scientific simulations, and complex data analysis, featuring powerful processors, ample RAM, and professional-grade GPUs.</p></div><div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: left; border-top: 4px solid #0078d4;"><h3>Mini PCs & Stick PCs</h3><p>Compact and energy-efficient, ideal for media centers, digital signage, or basic computing tasks where space is at a premium.</p></div></div></div></section></main><footer><div class="container footer-content"><div class="footer-col"><h3>WindowsTech</h3><p>Your gateway to the world of powerful and reliable Windows computing solutions.</p><div class="social-links"><a href="#" aria-label="Facebook">F</a><a href="#" aria-label="Twitter">T</a><a href="#" aria-label="Instagram">I</a><a href="#" aria-label="LinkedIn">L</a></div></div><div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Windows</a></li><li><a href="services.html">Our Services</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-col"><h3>Support</h3><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Warranty Information</a></li><li><a href="#">Privacy Policy</a></li></ul></div><div class="footer-col"><h3>Contact Us</h3><p>Email: info@windowstech.com</p><p>Phone: +1 (555) 123-4567</p><p>Address: 123 Tech Lane, Innovation City, PC 90210</p></div></div><div class="footer-bottom"><p>&copy; 2023 WindowsTech. All rights reserved.</p></div></footer></body></html><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Computer Company - Services</title><style>
+        /* Global Styles (Copied from index.html for consistency) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0078d4;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: #555;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #0078d4;
+            border-bottom: 2px solid #0078d4;
+        }
+
+        /* Hero Section for Services Page */
+        .services-hero {
+            background: linear-gradient(135deg, #d0e8f2 0%, #a7d9ed 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: #005a9e;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .services-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+        .services-hero p {
+            font-size: 22px;
+            color: #333;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            text-align: left;
+        }
+        .content-section:nth-of-type(even) {
+            background-color: #f9fbfd;
+        }
+        .content-section h2 {
+            font-size: 42px;
+            color: #005a9e;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .content-section h3 {
+            font-size: 32px;
+            color: #0078d4;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #0078d4;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .service-card .icon {
+            font-size: 60px;
+            color: #0078d4;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .service-card h4 {
+            font-size: 26px;
+            color: #005a9e;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .service-card p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 0;
+            max-width: none;
+        }
+        .list-style-none {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+        .list-style-none li {
+            background-color: #e0f2f7;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .list-style-none li::before {
+            content: '✓';
+            color: #0078d4;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        /* Footer (Copied from index.html for consistency) */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 50px 0;
+            font-size: 15px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #0078d4;
+        }
+        .footer-col p {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ccc;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #0078d4;
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 30px;
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-hero h1 {
+                font-size: 48px;
+            }
+            .services-hero p {
+                font-size: 20px;
+            }
+            .content-section h2 {
+                font-size: 36px;
+            }
+            .content-section h3 {
+                font-size: 28px;
+            }
+            .content-section p, .list-style-none li {
+                font-size: 17px;
+            }
+            .service-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            .service-card h4 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: none;
+            }
+            .nav-links a:hover, .nav-links a.active {
+                border-bottom: none;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+            .services-hero {
+                padding: 60px 0;
+            }
+            .services-hero h1 {
+                font-size: 40px;
+            }
+            .services-hero p {
+                font-size: 18px;
+            }
+            .content-section {
+                padding: 60px 0;
+            }
+            .content-section h2 {
+                font-size: 32px;
+            }
+            .content-section h3 {
+                font-size: 26px;
+            }
+            .content-section p, .list-style-none li {
+                font-size: 16px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-col {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .footer-col ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-links {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-hero h1 {
+                font-size: 32px;
+            }
+            .services-hero p {
+                font-size: 16px;
+            }
+            .content-section h2 {
+                font-size: 28px;
+            }
+            .content-section h3 {
+                font-size: 22px;
+            }
+            .content-section p, .list-style-none li {
+                font-size: 15px;
+            }
+            .service-card h4 {
+                font-size: 20px;
+            }
+            .service-card p {
+                font-size: 14px;
+            }
+        }
+    </style></head><body><header><div class="container navbar"><a href="index.html" class="logo">WindowsTech</a><nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Windows</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="#">Contact</a></li></ul></nav></div></header><main><section class="services-hero"><div class="container"><h1 style="margin-bottom: 20px;">Our Services: Beyond the Box</h1><p>From secure delivery to personalized aesthetics, we ensure your Windows computer experience is exceptional from start to finish.</p></div></section><section class="content-section"><div class="container"><h2 style="margin-bottom: 60px;">Seamless Delivery & Setup</h2><p>We understand that receiving your new computer should be a smooth and exciting experience. Our delivery services are designed to be fast, secure, and convenient, ensuring your device arrives safely and ready for action.</p><div class="service-grid"><div class="service-card"><span class="icon">🚚</span><h4>Fast & Reliable Shipping</h4><p>Choose from various shipping options, including expedited delivery, to get your computer when you need it. We partner with trusted carriers for timely and secure transit.</p></div><div class="service-card"><span class="icon">📦</span><h4>Secure & Protective Packaging</h4><p>Every computer is meticulously packaged in custom-fit, shock-absorbent materials to withstand the rigors of transit, guaranteeing it arrives in pristine condition.</p></div><div class="service-card"><span class="icon">📍</span><h4>Real-time Tracking</h4><p>Stay informed every step of the way with comprehensive tracking information. Know exactly where your order is from our warehouse to your doorstep.</p></div><div class="service-card"><span class="icon">🛠️</span><h4>Optional On-Site Setup</h4><p>For those who prefer a hands-off approach, our expert technicians can provide on-site setup and basic configuration services, getting you up and running without hassle.</p></div><div class="service-card"><span class="icon">🌍</span><h4>International Shipping</h4><p>We proudly offer international shipping to bring our premium Windows computers to customers worldwide, with clear customs and duty guidance.</p></div><div class="service-card"><span class="icon">🔄</span><h4>Easy Returns & Exchanges</h4><p>Our customer-friendly return policy ensures peace of mind. If you're not completely satisfied, we make returns and exchanges straightforward.</p></div></div></div></section><section class="content-section" style="background-color: #ffffff;"><div class="container"><h2 style="margin-bottom: 60px;">Cosmetics & Customization: Make It Yours</h2><p>Your computer is more than just a tool; it's an extension of your personality. Our customization services allow you to personalize your Windows machine, making it truly unique.</p><div class="service-grid"><div class="service-card"><span class="icon">🎨</span><h4>Custom Paint & Wraps</h4><p>Transform the look of your PC with professional paint jobs or high-quality vinyl wraps. Choose from a vast palette of colors and finishes to match your style.</p></div><div class="service-card"><span class="icon">🌈</span><h4>RGB Lighting & Aesthetics</h4><p>Elevate your setup with dynamic RGB lighting solutions. From subtle accents to vibrant light shows, we can integrate custom LED strips, fans, and components.</p></div><div class="service-card"><span class="icon">✨</span><h4>Premium Cable Management</h4><p>Achieve a clean, professional interior with expert cable management. Not only does it look better, but it also improves airflow and system longevity.</p></div><div class="service-card"><span class="icon">💎</span><h4>Engraving & Personalization</h4><p>Add a personal touch with custom laser engraving. Your name, logo, or a special message can be etched onto your computer's chassis or components.</p></div><div class="service-card"><span class="icon">⚙️</span><h4>Component Styling & Upgrades</h4><p>Beyond performance, we offer aesthetic upgrades for individual components, such as custom GPU backplates, CPU cooler covers, and unique case modifications.</p></div><div class="service-card"><span class="icon">🛡️</span><h4>Protective Coatings</h4><p>Apply specialized coatings that not only enhance appearance but also offer protection against scratches, dust, and fingerprints, keeping your PC looking new.</p></div></div><h3 style="margin-top: 80px; margin-bottom: 40px;">Our Customization Process</h3><ul class="list-style-none"><li><strong>Consultation:</strong> Discuss your vision and requirements with our design specialists.</li><li><strong>Design & Mock-up:</strong> Receive a digital mock-up of your customized computer for approval.</li><li><strong>Precision Crafting:</strong> Our skilled technicians meticulously apply your chosen customizations.</li><li><strong>Quality Assurance:</strong> Every customized PC undergoes rigorous testing to ensure functionality and aesthetic perfection.</li><li><strong>Secure Delivery:</strong> Your unique, personalized computer is carefully packaged and shipped to you.</li></ul></div></section></main><footer><div class="container footer-content"><div class="footer-col"><h3>WindowsTech</h3><p>Your gateway to the world of powerful and reliable Windows computing solutions.</p><div class="social-links"><a href="#" aria-label="Facebook">F</a><a href="#" aria-label="Twitter">T</a><a href="#" aria-label="Instagram">I</a><a href="#" aria-label="LinkedIn">L</a></div></div><div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Windows</a></li><li><a href="services.html">Our Services</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-col"><h3>Support</h3><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Warranty Information</a></li><li><a href="#">Privacy Policy</a></li></ul></div><div class="footer-col"><h3>Contact Us</h3><p>Email: info@windowstech.com</p><p>Phone: +1 (555) 123-4567</p><p>Address: 123 Tech Lane, Innovation City, PC 90210</p></div></div><div class="footer-bottom"><p>&copy; 2023 WindowsTech. All rights reserved.</p></div></footer></body></html>
