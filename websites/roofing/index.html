@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Down Roofing</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary-dark: #2C3E50; /* Dark Slate Gray - for header, footer, main text */
+            --primary-accent: #D35400; /* Pumpkin - for buttons, highlights */
+            --text-dark: #34495E; /* Wet Asphalt - for body text */
+            --text-light: #ECF0F1; /* Clouds - for text on dark backgrounds */
+            --background-light: #FDFDFD; /* Almost white - for main content background */
+            --button-hover: #E67E22; /* Carrot - slightly lighter accent for hover */
+            --border-light: #E0E0E0; /* Light gray for borders */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active-nav {
+            color: var(--primary-accent);
+            border-bottom: 2px solid var(--primary-accent);
+        }
+
+        .nav-toggle {
+            display: none; /* Hidden by default on larger screens */
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 0; /* Page sections handle their own padding */
+        }
+
+        .page-section {
+            display: none; /* Hidden by default */
+            padding: 60px 0;
+            min-height: calc(100vh - 180px); /* Adjust based on header/footer height */
+        }
+
+        .page-section.active {
+            display: block; /* Show active page */
+        }
+
+        .page-section h1,
+        .page-section h2,
+        .page-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .page-section h1 {
+            font-size: 3rem;
+        }
+
+        .page-section h2 {
+            font-size: 2.5rem;
+        }
+
+        .page-section h3 {
+            font-size: 1.8rem;
+        }
+
+        .page-section p {
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section (Home Page) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600/2C3E50/ECF0F1?text=Roofing+Hero+Image') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-accent);
+            color: var(--text-light);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn.primary:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Services Overview */
+        .services-overview {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background-color: var(--background-light);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-item p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin: 0; /* Override default p margin */
+        }
+
+        /* About Us Page */
+        #about-page .container {
+            text-align: left;
+        }
+        #about-page h2, #about-page h3 {
+            text-align: center;
+        }
+        #about-page p {
+            text-align: left;
+            margin-bottom: 1em;
+        }
+        #about-page ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #about-page ul li {
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-left: 5px solid var(--primary-accent);
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+        #about-page ul li strong {
+            color: var(--primary-dark);
+        }
+
+        /* Gallery Page */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            background-color: var(--border-light);
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-item.coming-soon {
+            background-color: #f0f0f0;
+            border: 2px dashed var(--primary-dark);
+            color: var(--primary-dark);
+            font-style: italic;
+        }
+
+        .gallery-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .gallery-item p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        /* Reviews Page */
+        #reviews-list {
+            margin-top: 40px;
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .review-item {
+            background-color: var(--background-light);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .review-item p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 10px !important;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: var(--primary-dark);
+            text-align: right !important;
+            font-size: 0.95rem;
+        }
+
+        .review-form, .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            padding: 30px;
+            background-color: var(--background-light);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            color: var(--text-dark);
+            background-color: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(var(--primary-accent), 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .review-form .btn, .contact-form .btn {
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 12px 30px;
+        }
+
+        /* Contact Page */
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .contact-info a {
+            color: var(--primary-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--button-hover);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .nav-toggle {
+                display: block; /* Show toggle button */
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                display: none; /* Hidden by default on mobile */
+                background-color: var(--primary-dark);
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                left: 0;
+                padding: 15px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-menu.active {
+                display: flex; /* Show when active */
+            }
+
+            .nav-menu li {
+                margin: 0;
+                text-align: center;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 12px 20px;
+                border-bottom: none; /* Remove border for mobile links */
+            }
+
+            .nav-menu a:hover,
+            .nav-menu a.active-nav {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: var(--primary-accent);
+                border-bottom: none;
+            }
+
+            header .container {
+                flex-wrap: nowrap;
+            }
+
+            .logo {
+                flex-grow: 1; /* Push toggle to right */
+            }
+
+            .page-section {
+                padding: 40px 0;
+            }
+
+            .page-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .page-section h2 {
+                font-size: 2rem;
+            }
+
+            .page-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-grid, .gallery-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-toggle {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Top Down Roofing</div>
+            <nav>
+                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-menu">
+                    <li><a href="#" data-page="home" class="active-nav">Home</a></li>
+                    <li><a href="#" data-page="about">About Us</a></li>
+                    <li><a href="#" data-page="gallery">Gallery</a></li>
+                    <li><a href="#" data-page="reviews">Reviews</a></li>
+                    <li><a href="#" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Home Page Content -->
+        <section id="home-page" class="page-section active">
+            <div class="hero">
+                <h1>Your Roof, Our Priority.</h1>
+                <p>Expert roofing solutions for every home and business.</p>
+                <a href="#" data-page="contact" class="btn primary">Get a Free Estimate</a>
+            </div>
+            <div class="container services-overview">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Residential Roofing</h3>
+                        <p>Protecting your home with durable and beautiful roofs, tailored to your needs.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Commercial Roofing</h3>
+                        <p>Reliable, long-lasting roofing systems designed for businesses of all sizes.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Roof Repair</h3>
+                        <p>Fast and effective repairs to address leaks, storm damage, and extend your roof's life.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Roof Maintenance</h3>
+                        <p>Proactive inspections and care to keep your roof in top condition year-round.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Page Content -->
+        <section id="about-page" class="page-section">
+            <div class="container">
+                <h2>About Top Down Roofing</h2>
+                <p>Top Down Roofing has been a trusted name in the roofing industry for over 20 years. Founded on principles of integrity, quality craftsmanship, and unparalleled customer service, we are dedicated to providing the best roofing solutions for our community.</p>
+                <p>Our team of certified and experienced roofers uses only the highest quality materials and the latest techniques to ensure every project is completed to the highest standards. From minor repairs to complete roof replacements, we handle every job with precision and care, ensuring your peace of mind.</p>
+                <h3>Our Mission</h3>
+                <p>To deliver superior roofing services that protect and enhance properties, ensuring peace of mind for our clients through exceptional quality and reliable service.</p>
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Quality:</strong> We never compromise on materials or workmanship, ensuring lasting results.</li>
+                    <li><strong>Integrity:</strong> Honest assessments, transparent pricing, and ethical business practices.</li>
+                    <li><strong>Customer Focus:</strong> Your satisfaction is our top priority, from consultation to completion.</li>
+                    <li><strong>Safety:</strong> Adhering to the highest safety standards for our team and your property.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Gallery Page Content -->
+        <section id="gallery-page" class="page-section">
+            <div class="container">
+                <h2>Our Work Gallery</h2>
+                <p>Showcasing some of our recent projects. See the quality and craftsmanship we bring to every roof.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item coming-soon">
+                        <h3>Residential Project 1</h3>
+                        <p>Images Coming Soon!</p>
+                    </div>
+                    <div class="gallery-item coming-soon">
+                        <h3>Commercial Project 1</h3>
+                        <p>Images Coming Soon!</p>
+                    </div>
+                    <div class="gallery-item coming-soon">
+                        <h3>Roof Repair Example</h3>
+                        <p>Images Coming Soon!</p>
+                    </div>
+                    <div class="gallery-item coming-soon">
+                        <h3>Full Replacement</h3>
+                        <p>Images Coming Soon!</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-dark);">We are currently compiling our extensive portfolio of completed projects. Please check back soon for stunning before & after transformations!</p>
+            </div>
+        </section>
+
+        <!-- Reviews Page Content -->
+        <section id="reviews-page" class="page-section">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <div id="reviews-list">
+                    <div class="review-item">
+                        <p class="review-text">"Top Down Roofing did an amazing job on our new roof! Professional, efficient, and the quality is outstanding. Highly recommend their services!"</p>
+                        <p class="review-author">- John D., Anytown, USA</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-text">"Had a leak after a storm, and they were quick to respond and fix it. Excellent service and fair pricing, truly saved us from further damage."</p>
+                        <p class="review-author">- Sarah P., Anytown, USA</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-text">"The team was incredibly knowledgeable and helped us choose the perfect materials for our home. The installation was seamless and on schedule."</p>
+                        <p class="review-author">- Michael R., Anytown, USA</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px;">Leave a Review</h3>
+                <form id="review-form" class="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name:</label>
+                        <input type="text" id="reviewer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text-input">Your Review:</label>
+                        <textarea id="review-text-input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Submit Review</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Page Content -->
+        <section id="contact-page" class="page-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions, need a free estimate, or want to discuss your roofing project? Get in touch with Top Down Roofing today!</p>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@topdownroofing.com">info@topdownroofing.com</a></p>
+                    <p><strong>Address:</strong> 123 Roofing Lane, Anytown, USA 12345</p>
+                </div>
+
+                <h3 style="margin-top: 40px;">Send Us a Message</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject:</label>
+                        <input type="text" id="contact-subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" rows="7" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+                <p id="contact-message-status" style="margin-top: 15px; text-align: center; color: var(--primary-dark); font-weight: bold;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Top Down Roofing. All rights reserved.</p>
+            <p>Quality Roofing Solutions Since 2003.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const pageSections = document.querySelectorAll('.page-section');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const reviewForm = document.getElementById('review-form');
+            const reviewsList = document.getElementById('reviews-list');
+            const contactForm = document.getElementById('contact-form');
+            const contactMessageStatus = document.getElementById('contact-message-status');
+            const ctaButtons = document.querySelectorAll('.btn[data-page]');
+
+            // Function to show a specific page
+            const showPage = (pageId) => {
+                pageSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(pageId + '-page').classList.add('active');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active-nav');
+                    }
+                });
+
+                // Close mobile nav after selection
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            };
+
+            // Initial page load (Home)
+            showPage('home');
+
+            // Navigation links click handler
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = e.target.dataset.page;
+                    showPage(pageId);
+                });
+            });
+
+            // CTA buttons click handler (e.g., "Get a Free Estimate" on Home page)
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = e.target.dataset.page;
+                    showPage(pageId);
+                });
+            });
+
+            // Mobile navigation toggle
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Review form submission handler
+            reviewForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const reviewerName = document.getElementById('reviewer-name').value;
+                const reviewText = document.getElementById('review-text-input').value;
+
+                if (reviewerName && reviewText) {
+                    const newReviewItem = document.createElement('div');
+                    newReviewItem.classList.add('review-item');
+                    newReviewItem.innerHTML = `
+                        <p class="review-text">"${reviewText}"</p>
+                        <p class="review-author">- ${reviewerName}, Anytown, USA</p>
+                    `;
+                    reviewsList.prepend(newReviewItem); // Add new review to the top
+                    reviewForm.reset(); // Clear the form
+                }
+            });
+
+            // Contact form submission handler
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // In a real application, you would send this data to a server
+                // For this exercise, we'll just show a success message
+                contactMessageStatus.textContent = 'Thank you for your message! We will get back to you shortly.';
+                contactForm.reset(); // Clear the form
+                setTimeout(() => {
+                    contactMessageStatus.textContent = ''; // Clear message after a few seconds
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
