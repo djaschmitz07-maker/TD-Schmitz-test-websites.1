@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gillette Wyoming Plumbing - Gillette's Premier Plumbing Experts</title>
+    <meta name="description" content="Gillette Wyoming Plumbing provides top-tier plumbing services in Gillette, Wyoming. Specializing in residential and commercial plumbing repair, installation, and maintenance. Get a free estimate today!">
+    <meta name="keywords" content="Gillette plumbing, Wyoming plumbing, plumber Gillette, plumbing repair Gillette, plumbing installation Gillette, commercial plumbing Gillette, residential plumbing Gillette, plumbing contractor Gillette, best plumber Gillette, local plumber Gillette, Gillette Wyoming Plumbing, emergency plumbing Gillette, water heater repair Gillette, drain cleaning Gillette, pipe repair Gillette, bathroom remodeling Gillette, kitchen plumbing Gillette, sewer line repair Gillette, gas line repair Gillette">
+    <meta name="author" content="Gillette Wyoming Plumbing">
+    <link rel="canonical" href="https://djaschmitz07-maker.github.io/Gillette-Wyoming-Plumbing/">
+    <style>
+        :root {
+            --primary-color: #0A2342; /* Dark Navy Blue */
+            --secondary-color: #1E90FF; /* Dodger Blue */
+            --accent-color: #FF8C00; /* Dark Orange */
+            --text-light: #f0f0f0;
+            --text-dark: #333333;
+            --neutral-gray: #cccccc; /* For inactive stars, etc. */
+            --header-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--text-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+            position: relative; /* For dropdown */
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+            display: block; /* Ensure padding works */
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+
+        /* Dropdown for Services */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%; /* Position below the parent link */
+            left: 0;
+            padding: 10px 0;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            color: var(--text-light);
+            padding: 12px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .dropdown-menu li a::after {
+            display: none; /* Hide underline for dropdown items */
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+        }
+
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .hamburger-icon {
+            display: none; /* Hidden by default on desktop */
+            cursor: pointer;
+            padding: 10px;
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            object-fit: contain;
+            filter: invert(100%); /* Make it white */
+        }
+
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+
+        main {
+            padding-top: var(--header-height); /* Offset for fixed header */
+        }
+
+        section {
+            padding: 80px 5%;
+            min-height: calc(100vh - var(--header-height));
+            display: none; /* Hidden by default for single-page navigation */
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://storables.com/wp-content/uploads/2023/09/how-long-does-plumbing-take-1695607076.jpeg') no-repeat center center/cover fixed;
+            color: var(--text-light);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Increased height */
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+
+        .cta-button { /* Unified CTA button style */
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+            border: none;
+            cursor: pointer;
+            display: inline-block; /* For buttons that are links */
+        }
+
+        .cta-button:hover {
+            background-color: #000066; /* Darker navy */
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .service-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: left;
+            border-left: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .service-item p {
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .contact-form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container input[type="tel"],
+        .contact-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--neutral-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form-container input[type="text"]:focus,
+        .contact-form-container input[type="email"]:focus,
+        .contact-form-container input[type="tel"]:focus,
+        .contact-form-container textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2); /* Adjusted for new secondary color */
+            outline: none;
+        }
+
+        .contact-form-container textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form-container button[type="submit"] {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form-container button[type="submit"]:hover {
+            background-color: #000066; /* Darker navy */
+            transform: translateY(-3px);
+        }
+
+        .contact-info-block {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info-block p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .contact-info-block a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info-block a:hover {
+            color: #000066;
+            text-decoration: underline;
+        }
+
+        .reviews-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .review-form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--secondary-color);
+            margin-bottom: 50px;
+        }
+
+        .review-form-container h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            direction: rtl; /* For right-to-left star selection */
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2.5rem;
+            color: var(--neutral-gray); /* Default star color */
+            cursor: pointer;
+            padding: 0 5px;
+            transition: color 0.2s ease;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input[type="radio"]:checked ~ label {
+            color: var(--accent-color); /* Orange for active stars */
+        }
+
+        .review-form-container input[type="text"],
+        .review-form-container input[type="email"],
+        .review-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--neutral-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .review-form-container input[type="text"]:focus,
+        .review-form-container input[type="email"]:focus,
+        .review-form-container textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2); /* Adjusted for new secondary color */
+            outline: none;
+        }
+
+        .review-form-container textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .review-form-container button[type="submit"] {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+        }
+
+        .review-form-container button[type="submit"]:hover {
+            background-color: #000066;
+            transform: translateY(-3px);
+        }
+
+        .existing-reviews {
+            margin-top: 50px;
+        }
+
+        .existing-reviews h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .review-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color); /* Orange border for reviews */
+        }
+
+        .review-item .stars {
+            color: var(--accent-color); /* Orange stars */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .review-item .reviewer-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .review-item .review-text {
+            color: var(--text-dark);
+            font-style: italic;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-color); /* Orange underline */
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Interactive elements */
+        .interactive-element {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-element::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: left 0.4s ease-out;
+            z-index: 1;
+        }
+
+        .interactive-element:hover::before {
+            left: 100%;
+        }
+
+        /* Apply to cards, service items, ranking items */
+        .card, .service-item, .review-item {
+            position: relative; /* Needed for ::before pseudo-element */
+            overflow: hidden;
+        }
+
+        .card::before, .service-item::before, .review-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease-out;
+            z-index: 1;
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+
+        .card:hover::before, .service-item:hover::before, .review-item:hover::before {
+            left: 100%;
+        }
+
+        /* Specific banner styles for service pages */
+        .service-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) no-repeat center center/cover fixed;
+            color: var(--text-light);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh; /* Shorter banner for service pages, increased height */
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .service-banner h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .service-banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                width: 95%;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                display: none; /* Hide desktop nav */
+            }
+
+            .hamburger-icon {
+                display: block; /* Show hamburger */
+            }
+
+            /* Mobile Nav Menu (full screen overlay) */
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background-color: var(--primary-color);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                padding: 20px 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+                overflow-y: auto; /* Allow scrolling for many links */
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .nav-menu li a {
+                font-size: 1.2rem;
+                padding: 10px 0;
+                display: block;
+            }
+
+            /* Mobile dropdown for services */
+            .dropdown-menu {
+                position: static; /* Remove absolute positioning */
+                display: none;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8); /* Slightly lighter for sub-items */
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .nav-menu li.dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu li a {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                order: -1; /* Image above text on mobile */
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+                width: 100%;
+            }
+
+            .footer-section h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .service-banner h2 {
+                font-size: 2rem;
+            }
+
+            .service-banner p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .card, .service-item, .review-form-container {
+                padding: 20px;
+            }
+
+            .star-rating label {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo" onclick="showSection('home'); return false;">Gillette Wyoming Plumbing</a>
+            <nav>
+                <img src="https://www.shareicon.net/fdata/2015/12/02/681374_button_512x512.png" alt="Menu" class="hamburger-icon" id="hamburger">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link" data-section="services-parent">Services <span style="font-size: 0.8em;">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#residential-plumbing-repair" class="nav-link" data-section="residential-plumbing-repair">Residential Plumbing Repair</a></li>
+                            <li><a href="#commercial-plumbing-repair" class="nav-link" data-section="commercial-plumbing-repair">Commercial Plumbing Repair</a></li>
+                            <li><a href="#water-heater-services" class="nav-link" data-section="water-heater-services">Water Heater Services</a></li>
+                            <li><a href="#drain-cleaning-clog-removal" class="nav-link" data-section="drain-cleaning-clog-removal">Drain Cleaning & Clog Removal</a></li>
+                            <li><a href="#sewer-line-services" class="nav-link" data-section="sewer-line-services">Sewer Line Services</a></li>
+                            <li><a href="#pipe-repair-repiping" class="nav-link" data-section="pipe-repair-repiping">Pipe Repair & Repiping</a></li>
+                            <li><a href="#fixture-installation-repair" class="nav-link" data-section="fixture-installation-repair">Fixture Installation & Repair</a></li>
+                            <li><a href="#emergency-plumbing" class="nav-link" data-section="emergency-plumbing">Emergency Plumbing</a></li>
+                            <li><a href="#gas-line-services" class="nav-link" data-section="gas-line-services">Gas Line Services</a></li>
+                            <li><a href="#bathroom-kitchen-remodeling" class="nav-link" data-section="bathroom-kitchen-remodeling">Bathroom & Kitchen Remodeling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#reviews" class="nav-link" data-section="reviews">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <div class="hero">
+                <h1>Your Trusted Plumbing Partner in Gillette, WY</h1>
+                <p>Gillette Wyoming Plumbing provides superior residential and commercial plumbing solutions. From leaky faucets to complex sewer line repairs, we ensure quality workmanship and lasting solutions for your property.</p>
+                <button class="cta-button" onclick="showSection('contact'); return false;">Get a Free Estimate Today!</button>
+            </div>
+
+            <div style="padding: 80px 5%; background-color: #f0f0f0;">
+                <h2 class="section-title">Why Choose Gillette Wyoming Plumbing?</h2>
+                <div class="content-grid">
+                    <div class="card interactive-element">
+                        <h3>Local Expertise</h3>
+                        <p>Deep understanding of Gillette's plumbing infrastructure and common issues, ensuring efficient and effective solutions.</p>
+                    </div>
+                    <div class="card interactive-element">
+                        <h3>Quality Workmanship</h3>
+                        <p>Our experienced, licensed plumbers use only the highest quality materials and proven techniques for every project.</p>
+                    </div>
+                    <div class="card interactive-element">
+                        <h3>Customer Satisfaction</h3>
+                        <p>We prioritize clear communication, transparent pricing, and exceeding your expectations on every plumbing job.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 80px 5%; background-color: #ffffff;">
+                <h2 class="section-title">Our Core Plumbing Services</h2>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Emergency Plumbing</h3>
+                        <p>Rapid response for burst pipes, severe leaks, and other urgent plumbing issues to minimize damage.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Drain Cleaning</h3>
+                        <p>Professional removal of stubborn clogs and blockages in sinks, toilets, showers, and main sewer lines.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Water Heater Services</h3>
+                        <p>Expert repair, installation, and maintenance for traditional and tankless water heaters, ensuring hot water when you need it.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#residential-plumbing-repair" class="cta-button" onclick="showSection('residential-plumbing-repair'); return false;">View All Services</a>
+                </div>
+            </div>
+
+            <div style="padding: 80px 5%; background-color: #f0f0f0;">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="content-grid">
+                    <div class="review-item interactive-element">
+                        <div class="stars">★★★★★</div>
+                        <p class="reviewer-name">John D. from Gillette</p>
+                        <p class="review-text">"Gillette Wyoming Plumbing fixed our leaky water heater quickly and professionally. They were on time and very knowledgeable!"</p>
+                    </div>
+                    <div class="review-item interactive-element">
+                        <div class="stars">★★★★★</div>
+                        <p class="reviewer-name">Sarah P. from Wright</p>
+                        <p class="review-text">"Had a clogged drain that wouldn't budge. The plumber from Gillette Wyoming Plumbing cleared it in no time. Excellent service!"</p>
+                    </div>
+                    <div class="review-item interactive-element">
+                        <div class="stars">★★★★★</div>
+                        <p class="reviewer-name">Mike R. from Rozet</p>
+                        <p class="review-text">"They installed a new tankless water heater for us. The process was smooth, and the team was fantastic. Highly recommend!"</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#reviews" class="cta-button" onclick="showSection('reviews'); return false;">Read More Reviews</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Service Sections -->
+        <section id="residential-plumbing-repair">
+            <div class="service-banner" style="background-image: url('https://jollyplumbing.com/wp-content/uploads/2022/03/choose-a-residential-plumber.jpeg');">
+                <h2>Residential Plumbing Repair in Gillette</h2>
+                <p>Prompt and reliable solutions for all your home's plumbing issues, ensuring comfort and peace of mind.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Expert Residential Plumbing Repair Services</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">At Gillette Wyoming Plumbing, we understand that a functional plumbing system is essential for your home's comfort and hygiene. From minor drips to major leaks, our licensed and experienced plumbers are equipped to handle all residential plumbing repairs efficiently and effectively. We pride ourselves on diagnosing problems accurately and providing lasting solutions that restore your plumbing to optimal condition, preventing further damage and costly future repairs.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Our comprehensive residential plumbing repair services cover a wide range of issues, ensuring that no matter the problem, we have the expertise to fix it. We use state-of-the-art tools and techniques to identify the root cause of your plumbing woes, offering transparent explanations and upfront pricing before any work begins. Trust Gillette Wyoming Plumbing to keep your home's water flowing smoothly.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Leak Detection & Repair</h3>
+                        <p>Our skilled technicians use advanced techniques to pinpoint the source of leaks, even hidden ones behind walls or under floors, and provide durable repairs to prevent water damage and mold growth.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Faucet & Fixture Repair</h3>
+                        <p>We fix leaky faucets, running toilets, and malfunctioning showerheads, saving you water and preventing annoying drips. We can repair or replace all types of fixtures.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Toilet Repair & Replacement</h3>
+                        <p>From constant running to weak flushing, we diagnose and repair all toilet issues. If a replacement is needed, we offer efficient installation of new, water-efficient models.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Garbage Disposal Repair</h3>
+                        <p>Is your garbage disposal jammed, leaking, or making strange noises? We can repair or replace faulty disposals quickly, restoring convenience to your kitchen.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sump Pump Repair</h3>
+                        <p>A failing sump pump can lead to basement flooding. We offer repair and maintenance services to ensure your sump pump is ready to protect your home during heavy rains or snowmelt.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Water Pressure Issues</h3>
+                        <p>Experiencing low water pressure or sudden fluctuations? We can diagnose and resolve issues ranging from clogged pipes to faulty pressure regulators, restoring consistent flow.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Don't let plumbing problems disrupt your daily life. Contact Gillette Wyoming Plumbing today for a thorough inspection and reliable residential plumbing repair services in Gillette, WY. We're here to keep your home safe and dry.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Request a Free Repair Estimate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="commercial-plumbing-repair">
+            <div class="service-banner" style="background-image: url('https://assets.bxb.media/service_banners/Commercial+Plumbing/1+-+Commercial+Plumbing/commercial_plumbing_1024x576.jpg');">
+                <h2>Commercial Plumbing Repair for Gillette Businesses</h2>
+                <p>Protect your business operations with our expert commercial plumbing repair services, minimizing downtime and ensuring compliance.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Reliable Commercial Plumbing Repair Solutions</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">For businesses in Gillette, a plumbing issue can mean significant disruption, potential property damage, and even health code violations. Gillette Wyoming Plumbing specializes in comprehensive commercial plumbing repair, ensuring your operations remain uninterrupted and your property is protected. We understand the unique demands of commercial plumbing systems, from high-volume usage to complex piping networks, and provide tailored solutions for every challenge.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Our team of commercial plumbing experts is trained to work quickly and efficiently, minimizing impact on your business while delivering durable repairs. We serve a wide range of commercial properties, including restaurants, offices, retail spaces, and industrial facilities. With our proactive approach and rapid response times, you can trust us to keep your business's plumbing in top working order.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Commercial Leak Repair</h3>
+                        <p>We quickly identify and repair leaks in commercial pipes, fixtures, and appliances, preventing water damage, costly utility bills, and potential business interruptions.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Backflow Prevention</h3>
+                        <p>Ensuring your backflow prevention devices are functioning correctly is crucial for public health and code compliance. We offer testing, repair, and installation services.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Commercial Water Heater Repair</h3>
+                        <p>Hot water is vital for many businesses. We repair and maintain commercial water heaters, addressing issues like insufficient hot water, leaks, and strange noises.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Grease Trap Services</h3>
+                        <p>For restaurants and food service establishments, proper grease trap maintenance and repair are essential to prevent clogs and comply with local regulations. We handle cleaning and repair.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Commercial Drain & Sewer Repair</h3>
+                        <p>We tackle tough commercial drain clogs and sewer line issues, utilizing advanced techniques like hydro-jetting and camera inspections to ensure clear and functional lines.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Emergency Commercial Plumbing</h3>
+                        <p>Unexpected plumbing emergencies can cripple a business. We offer rapid response services to address critical issues like burst pipes, major leaks, and sewer backups, 24/7.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Keep your business running smoothly with a reliable plumbing system. Contact Gillette Wyoming Plumbing for professional commercial plumbing repair and maintenance services in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Schedule Commercial Plumbing Service</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="water-heater-services">
+            <div class="service-banner" style="background-image: url('https://infinityplumbingservices.com/wp-content/uploads/2022/06/iStock-180105038.jpg');">
+                <h2>Water Heater Services in Gillette</h2>
+                <p>Expert repair, installation, and maintenance for all types of water heaters, ensuring reliable hot water for your home or business.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Comprehensive Water Heater Repair & Installation</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">A reliable supply of hot water is a necessity, not a luxury. At Gillette Wyoming Plumbing, we provide complete water heater services, including expert repair, efficient installation, and proactive maintenance for both traditional tank-style and modern tankless water heaters. Whether you're experiencing cold showers, strange noises, or a leaky unit, our certified plumbers have the knowledge and tools to get your hot water flowing again.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">We understand that choosing a new water heater or repairing an existing one can be a significant decision. Our team will assess your needs, explain your options, and help you select the most energy-efficient and cost-effective solution for your property. We handle everything from minor adjustments to full system replacements with precision and care, ensuring your hot water system operates safely and efficiently for years to come.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Water Heater Repair</h3>
+                        <p>We diagnose and fix common issues like no hot water, insufficient hot water, strange noises, leaks, and pilot light problems for all makes and models of water heaters.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>New Water Heater Installation</h3>
+                        <p>When it's time for a replacement, we offer professional installation of energy-efficient tank-style water heaters, ensuring proper sizing and setup for optimal performance.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Tankless Water Heater Services</h3>
+                        <p>Experience endless hot water with a tankless system. We specialize in the installation, repair, and maintenance of on-demand tankless water heaters, offering energy savings and space efficiency.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Water Heater Maintenance</h3>
+                        <p>Regular flushing and inspection can extend the life of your water heater and improve efficiency. Our maintenance services prevent sediment buildup and catch issues early.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Expansion Tank Installation</h3>
+                        <p>Protect your water heater and plumbing system from excessive pressure with proper expansion tank installation, a crucial component for safety and longevity.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Emergency Water Heater Service</h3>
+                        <p>A sudden lack of hot water or a leaking water heater can be an emergency. We offer prompt service to address urgent water heater issues, minimizing inconvenience and damage.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Don't suffer through cold showers. Contact Gillette Wyoming Plumbing today for expert water heater repair, installation, or maintenance services in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Get a Free Water Heater Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="drain-cleaning-clog-removal">
+            <div class="service-banner" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.AmA7H7YI7n0vbQxEyapggQHaEP?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                <h2>Drain Cleaning & Clog Removal in Gillette</h2>
+                <p>Fast and effective solutions for stubborn clogs and slow drains, restoring proper flow to your plumbing system.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Professional Drain Cleaning & Clog Removal</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Clogged drains are a common and frustrating plumbing problem that can disrupt your daily routine and lead to more severe issues if not addressed promptly. At Gillette Wyoming Plumbing, we specialize in professional drain cleaning and clog removal services for homes and businesses throughout Gillette. Whether it's a slow-draining sink, a backed-up toilet, or a completely blocked main sewer line, our expert plumbers have the tools and expertise to clear any obstruction.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">We go beyond temporary fixes, using advanced diagnostic equipment like sewer cameras to identify the exact cause and location of the clog. This allows us to provide the most effective and long-lasting solution, preventing recurring blockages. From traditional snaking to powerful hydro-jetting, we employ the right technique for every type of clog, ensuring your drains are free-flowing and your plumbing system is healthy.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Kitchen Drain Cleaning</h3>
+                        <p>Grease, food particles, and soap scum can quickly build up in kitchen drains. We effectively clear these blockages, restoring proper drainage to your sink and garbage disposal.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Bathroom Drain Cleaning</h3>
+                        <p>Hair, soap residue, and toothpaste are common culprits for clogs in bathroom sinks, showers, and bathtubs. Our plumbers remove these obstructions for smooth drainage.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Toilet Clog Removal</h3>
+                        <p>Stubborn toilet clogs require professional attention. We use specialized tools to clear blockages without damaging your toilet or plumbing system.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Main Sewer Line Cleaning</h3>
+                        <p>A clogged main sewer line can affect all drains in your property. We offer comprehensive main line cleaning, including hydro-jetting, to clear severe blockages and restore flow.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Hydro-Jetting Services</h3>
+                        <p>For tough clogs and grease buildup, hydro-jetting uses high-pressure water to scour the inside of your pipes, removing even the most stubborn blockages and preventing future issues.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Drain Camera Inspection</h3>
+                        <p>To accurately diagnose recurring clogs or potential pipe damage, we use state-of-the-art drain cameras to visually inspect the interior of your pipes, providing precise solutions.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Don't let a clogged drain ruin your day. Contact Gillette Wyoming Plumbing for fast, reliable, and effective drain cleaning and clog removal services in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Schedule Drain Cleaning</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sewer-line-services">
+            <div class="service-banner" style="background-image: url('https://onecallhouston.com/wp-content/uploads/2024/05/Sewer-Line-Repair1-scaled.jpg');">
+                <h2>Sewer Line Services in Gillette</h2>
+                <p>Comprehensive sewer line repair, replacement, and maintenance to ensure the proper functioning of your property's waste disposal system.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Expert Sewer Line Repair & Replacement</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Your sewer line is a critical component of your plumbing system, responsible for carrying wastewater away from your home or business. When problems arise, such as blockages, leaks, or breaks, they can lead to serious issues like sewage backups, foul odors, and extensive property damage. Gillette Wyoming Plumbing offers comprehensive sewer line services in Gillette, including expert repair, efficient replacement, and proactive maintenance to keep your waste disposal system operating flawlessly.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">We utilize advanced diagnostic tools, such as sewer camera inspections, to accurately pinpoint the exact nature and location of any sewer line issue. This allows us to recommend the most effective and least invasive solution, whether it's a targeted repair or a full line replacement. Our skilled plumbers are trained in both traditional excavation methods and modern trenchless technologies, ensuring a solution that fits your property and budget while minimizing disruption.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Sewer Camera Inspection</h3>
+                        <p>Using high-resolution cameras, we visually inspect the inside of your sewer lines to identify cracks, blockages, root intrusion, and other damage without invasive digging.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sewer Line Repair</h3>
+                        <p>We perform targeted repairs for localized damage, such as patching small cracks or replacing damaged sections of pipe, to restore the integrity of your sewer system.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sewer Line Replacement</h3>
+                        <p>For severely damaged or aging sewer lines, we offer full replacement services, installing durable new pipes that meet current codes and provide long-term reliability.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Trenchless Sewer Repair</h3>
+                        <p>Minimize disruption to your landscaping with trenchless technologies like pipe bursting or pipe lining, which allow for repair or replacement with minimal excavation.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Root Intrusion Removal</h3>
+                        <p>Tree roots are a common cause of sewer line blockages and damage. We use specialized tools and techniques to remove roots and repair affected pipes.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sewer Line Maintenance</h3>
+                        <p>Proactive maintenance, including regular cleaning and inspections, can prevent major sewer line issues, saving you from costly emergency repairs down the line.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Don't let sewer line problems become a nightmare. Contact Gillette Wyoming Plumbing for reliable and efficient sewer line repair, replacement, and maintenance services in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Schedule Sewer Line Service</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pipe-repair-repiping">
+            <div class="service-banner" style="background-image: url('https://www.sharkbite.com/sites/default/files/styles/600x338_fallback/public/images/sb-commercial-social.jpg.jpeg?itok=YZwR-pVD');">
+                <h2>Pipe Repair & Repiping in Gillette</h2>
+                <p>Expert solutions for leaky, corroded, or damaged pipes, including comprehensive repiping services for lasting plumbing integrity.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Reliable Pipe Repair & Whole-Home Repiping</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Your home or business relies on a robust network of pipes to deliver clean water and remove wastewater. Over time, pipes can corrode, crack, or burst due to age, freezing temperatures, or shifting foundations, leading to leaks, water damage, and reduced water quality. Gillette Wyoming Plumbing provides expert pipe repair and comprehensive repiping services in Gillette, ensuring your plumbing system is durable, efficient, and leak-free.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Whether you need a quick fix for a minor leak or a complete overhaul of your aging plumbing system, our skilled plumbers are equipped to handle projects of all sizes. We work with various piping materials, including copper, PEX, and PVC, and will recommend the best solution based on your property's needs and your budget. Our goal is to provide long-lasting solutions that improve water pressure, eliminate leaks, and enhance the overall value of your property.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Leak Detection & Repair</h3>
+                        <p>We accurately locate and repair all types of pipe leaks, from pinhole leaks to burst pipes, preventing water waste and extensive property damage.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Burst Pipe Repair</h3>
+                        <p>A burst pipe is an emergency. We offer rapid response services to quickly shut off water, repair the damaged section, and restore your plumbing system.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Whole-Home Repiping</h3>
+                        <p>For homes with old, corroded, or frequently leaking pipes, a full repipe replaces outdated plumbing with new, durable materials like copper or PEX, improving water quality and pressure.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>PEX Piping Installation</h3>
+                        <p>PEX is a flexible, durable, and cost-effective alternative to copper, ideal for repiping projects due to its resistance to freezing and corrosion. We specialize in PEX installations.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Copper Pipe Installation</h3>
+                        <p>Known for its longevity and reliability, copper piping remains a premium choice for repiping. We provide expert copper pipe installation and repair services.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Frozen Pipe Thawing & Prevention</h3>
+                        <p>Wyoming winters can cause pipes to freeze. We offer safe thawing services and advise on preventative measures to protect your plumbing from cold weather damage.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Ensure the integrity of your plumbing system with expert pipe repair and repiping services from Gillette Wyoming Plumbing. Contact us today for a consultation in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Get a Pipe Service Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="fixture-installation-repair">
+            <div class="service-banner" style="background-image: url('https://www.thuro.ca/wp-content/uploads/2022/06/Calgary-Plumbing.jpg');">
+                <h2>Fixture Installation & Repair in Gillette</h2>
+                <p>Professional installation and repair of faucets, toilets, sinks, and other plumbing fixtures for enhanced functionality and aesthetics.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Expert Fixture Installation & Repair Services</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Plumbing fixtures are more than just functional components; they contribute significantly to the aesthetics and convenience of your kitchen and bathrooms. Whether you're upgrading your home, remodeling a space, or simply need a leaky faucet fixed, Gillette Wyoming Plumbing provides professional fixture installation and repair services in Gillette. Our skilled plumbers ensure that all installations are done correctly, efficiently, and to the highest standards, preventing future issues and enhancing your property's value.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">From selecting the right fixtures to precise installation and reliable repairs, we handle every detail with care. We work with all major brands and types of fixtures, ensuring a perfect fit and seamless operation. Trust us to transform your spaces with beautiful, functional plumbing fixtures that stand the test of time.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Faucet Installation & Repair</h3>
+                        <p>We install and repair all types of kitchen and bathroom faucets, including single-handle, double-handle, pull-down, and touchless models, fixing leaks and improving water flow.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Toilet Installation & Repair</h3>
+                        <p>Upgrade to a new, water-efficient toilet or get your existing one repaired. We handle everything from minor adjustments to full toilet replacements, ensuring proper function.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sink Installation & Repair</h3>
+                        <p>Whether it's a new kitchen sink, bathroom vanity sink, or utility sink, we provide expert installation and repair services, including addressing leaks and drainage issues.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Shower & Bathtub Installation</h3>
+                        <p>Planning a bathroom remodel? We install new showers, bathtubs, and shower/tub combos, ensuring proper plumbing connections and waterproofing for a luxurious experience.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Garbage Disposal Installation</h3>
+                        <p>Enhance your kitchen's functionality with a new garbage disposal. We install various models, ensuring safe and efficient operation for easy food waste management.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Appliance Hook-Ups</h3>
+                        <p>We provide professional plumbing hook-ups for new appliances such as dishwashers, washing machines, and refrigerators with ice makers, ensuring secure and leak-free connections.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Upgrade your home's functionality and style with expert fixture installation and repair from Gillette Wyoming Plumbing. Contact us today for a consultation in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Get a Fixture Service Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="emergency-plumbing">
+            <div class="service-banner" style="background-image: url('https://s.hdnux.com/photos/01/32/47/20/23753775/3/rawImage.jpg');">
+                <h2>24/7 Emergency Plumbing in Gillette, WY</h2>
+                <p>When plumbing disasters strike, count on Gillette Wyoming Plumbing for rapid response and reliable emergency repair services.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Rapid Response Emergency Plumbing Services</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Plumbing emergencies don't wait for business hours. A burst pipe, severe leak, or sewage backup can cause significant damage to your property and disrupt your life or business operations. Gillette Wyoming Plumbing offers 24/7 emergency plumbing services in Gillette, WY, providing rapid response and expert solutions when you need them most. Our dedicated team is always on standby to address urgent plumbing issues, minimizing damage and restoring peace of mind.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">We understand the stress and urgency that comes with a plumbing emergency. Our experienced plumbers arrive quickly, equipped with the necessary tools and expertise to diagnose the problem and implement immediate, effective repairs. Don't hesitate to call us anytime, day or night, for reliable emergency plumbing assistance.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Burst Pipe Repair</h3>
+                        <p>Immediate response to burst pipes to shut off water, repair the damage, and prevent extensive water damage to your home or business.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Major Leak Detection & Repair</h3>
+                        <p>For significant leaks that can't wait, we quickly locate the source and perform necessary repairs to stop water flow and mitigate damage.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Sewer Backups</h3>
+                        <p>A sewage backup is a serious health hazard. We provide urgent service to clear blockages in your main sewer line and restore proper drainage.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>No Hot Water</h3>
+                        <p>If your water heater suddenly stops producing hot water, especially in cold weather, we offer emergency diagnostics and repairs to restore your hot water supply.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Overflowing Toilets</h3>
+                        <p>An overflowing toilet can quickly cause water damage. We respond promptly to clear severe clogs and repair faulty toilet mechanisms.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Gas Leak Detection & Repair</h3>
+                        <p>Gas leaks are extremely dangerous. If you suspect a gas leak, evacuate immediately and then call us for emergency detection and repair services.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">When a plumbing emergency strikes, don't delay. Contact Gillette Wyoming Plumbing immediately for expert 24/7 emergency plumbing services in Gillette, WY. We're your reliable partner in crisis.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Call for Emergency Service Now!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gas-line-services">
+            <div class="service-banner" style="background-image: url('https://rdrusg.net/wp-content/uploads/2025/01/Gas-Line-Install_677x677.jpg');">
+                <h2>Gas Line Services in Gillette</h2>
+                <p>Safe and reliable gas line installation, repair, and inspection for homes and businesses, ensuring your property's safety.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Professional Gas Line Installation & Repair</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Gas lines are essential for powering many appliances in your home or business, from furnaces and water heaters to stoves and outdoor grills. However, due to the inherent risks, gas line work must always be performed by licensed and experienced professionals. Gillette Wyoming Plumbing provides comprehensive gas line services in Gillette, including safe installation, precise repair, and thorough inspection, ensuring the safety and efficiency of your gas-powered systems.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Our certified plumbers are trained to handle all aspects of gas line plumbing with the utmost care and adherence to strict safety codes. Whether you need a new gas line run for an appliance, a leak detected and repaired, or an existing line inspected for integrity, you can trust our team to deliver reliable and compliant solutions. Your safety is our top priority.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Gas Line Installation</h3>
+                        <p>We safely install new gas lines for various appliances, including stoves, ovens, dryers, water heaters, fireplaces, and outdoor grills, ensuring proper sizing and connections.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Gas Line Repair</h3>
+                        <p>If you suspect a gas leak or have a damaged gas line, our experts provide rapid and precise repair services, using specialized equipment to locate and fix leaks safely.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Gas Leak Detection</h3>
+                        <p>Using advanced leak detection technology, we can quickly and accurately pinpoint the source of gas leaks, even small ones, to prevent dangerous situations.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Gas Appliance Hook-Ups</h3>
+                        <p>We professionally connect and test gas appliances, ensuring they are safely and correctly installed and ready for use.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Gas Line Relocation</h3>
+                        <p>For remodeling projects or appliance reconfigurations, we can safely relocate existing gas lines to new positions, ensuring compliance and functionality.</p>
+                    </div >
+                    <div class="service-item interactive-element">
+                        <h3>Gas Line Inspections</h3>
+                        <p>Regular inspections of your gas lines can identify potential issues before they become dangerous. We offer thorough inspections for peace of mind.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">For all your gas line needs, trust the licensed and experienced professionals at Gillette Wyoming Plumbing. Contact us today for safe and reliable gas line services in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Schedule Gas Line Service</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="bathroom-kitchen-remodeling">
+            <div class="service-banner" style="background-image: url('https://serviceplumbingandheating.com/wp-content/uploads/2024/10/Plumbing-4-scaled.jpg');">
+                <h2>Bathroom & Kitchen Remodeling Plumbing in Gillette</h2>
+                <p>Expert plumbing services for your bathroom and kitchen remodels, ensuring seamless integration and optimal functionality.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+                <h2 class="section-title">Seamless Plumbing for Your Remodeling Projects</h2>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Remodeling your bathroom or kitchen is an exciting way to enhance your home's value and functionality. A successful remodel, however, hinges on expert plumbing work. Gillette Wyoming Plumbing specializes in providing comprehensive plumbing services for bathroom and kitchen remodels in Gillette, ensuring that your new fixtures, appliances, and layouts are perfectly integrated and operate flawlessly. We work closely with homeowners and contractors to bring your vision to life, from initial planning to final installation.</p>
+                <p style="margin-bottom: 20px; color: var(--text-dark);">Our experienced plumbers understand the intricacies of remodeling projects and are adept at handling everything from relocating existing lines to installing complex new systems. We prioritize precision, efficiency, and adherence to all building codes, guaranteeing a smooth process and a stunning, functional result. Let us handle the plumbing, so you can focus on enjoying your newly transformed space.</p>
+                <div class="content-grid">
+                    <div class="service-item interactive-element">
+                        <h3>Fixture Relocation & Installation</h3>
+                        <p>Whether you're moving a sink, toilet, or shower, we expertly relocate and install all new plumbing fixtures, ensuring proper connections and optimal placement for your new layout.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>New Water & Drain Line Installation</h3>
+                        <p>For new sinks, showers, bathtubs, or appliances, we install all necessary water supply and drain lines, ensuring efficient water flow and waste removal.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Appliance Hook-Ups</h3>
+                        <p>We provide professional plumbing hook-ups for new kitchen appliances like dishwashers, refrigerators with ice makers, and garbage disposals, ensuring secure and leak-free connections.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Shower & Bathtub Plumbing</h3>
+                        <p>From custom shower systems to freestanding tubs, we handle all plumbing for your new shower or bathtub installation, including rough-ins, valve installation, and drain connections.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Water Pressure Optimization</h3>
+                        <p>During a remodel, we can assess and optimize your water pressure to ensure all new fixtures operate at their best, providing a comfortable and efficient experience.</p>
+                    </div>
+                    <div class="service-item interactive-element">
+                        <h3>Code Compliance & Permitting</h3>
+                        <p>We ensure all plumbing work for your remodel complies with local Gillette building codes and regulations, handling necessary permits for a hassle-free project.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-dark);">Make your bathroom and kitchen remodeling dreams a reality with expert plumbing services from Gillette Wyoming Plumbing. Contact us today for a consultation in Gillette, WY.</p>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#contact" class="cta-button" onclick="showSection('contact'); return false;">Plan Your Remodel Plumbing</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Individual Service Sections -->
+
+        <section id="about">
+            <h2 class="section-title">About Gillette Wyoming Plumbing</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Your Local Gillette Plumbing Experts</h2>
+                    <p>Gillette Wyoming Plumbing is a locally owned and operated plumbing company proudly serving Gillette, Wyoming, and the surrounding communities. With years of experience in the industry, we have built a reputation for reliability, quality, and exceptional customer service.</p>
+                    <p>Our mission is simple: to provide the highest standard of plumbing services, ensuring the safety, functionality, and efficiency of your home or business's plumbing system. We understand the unique challenges that Wyoming's climate and local infrastructure present to plumbing, and we are equipped with the knowledge and expertise to deliver solutions that stand the test of time.</p>
+                    <p>We believe in transparency, integrity, and open communication. From your initial consultation to the completion of your project, you can expect clear explanations, honest assessments, and a commitment to your satisfaction. Our team of skilled and licensed plumbers is dedicated to delivering superior craftsmanship on every job, big or small.</p>
+                    <p>At Gillette Wyoming Plumbing, we're not just fixing pipes; we're building relationships within our community. We are fully licensed and insured, giving you peace of mind that your property is in capable hands. Choose Gillette Wyoming Plumbing for a dependable, professional, and friendly plumbing experience.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/736x/e8/2d/2e/e82d2e73d1e37d653857b52b3fd3df52.jpg" alt="Gillette Wyoming Plumbing Team working in Gillette, Wyoming">
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2 class="section-title">Customer Reviews & Testimonials</h2>
+            <div class="reviews-section">
+                <div class="review-form-container">
+                    <h3>Leave Us a Review!</h3>
+                    <p style="text-align: center; margin-bottom: 20px; color: var(--text-dark);">Your feedback helps us improve and lets others know about our quality service.</p>
+                    <form id="review-submission-form">
+                        <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                        <input type="email" id="reviewer-email" placeholder="Your Email (Optional)">
+
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+                        </div>
+                        <textarea id="review-message" placeholder="Share your experience with us..." required></textarea>
+                        <button type="submit">Submit Review</button>
+                    </form>
+                </div>
+
+                <div class="existing-reviews" id="existing-reviews-list">
+                    <h3>What Our Valued Customers Say</h3>
+                    <!-- Reviews will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Gillette Wyoming Plumbing</h2>
+            <div class="contact-form-container">
+                <p style="text-align: center; margin-bottom: 30px; color: var(--text-dark);">Have questions or need a free estimate? Fill out the form below and we'll get back to you promptly!</p>
+                <form action="https://formsubmit.co/d.j.a.schmitz07@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Website Contact Form Submission!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input
+                        type="text"
+                        name="first_name"
+                        placeholder="First Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="last_name"
+                        placeholder="Last Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                    >
+
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"
+                    ></textarea>
+
+                    <button type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div class="contact-info-block">
+                <p><strong>Phone:</strong> <a href="tel:307-414-6029">307-414-6029</a></p>
+                <p><strong>Email:</strong> <a href="mailto:d.j.a.schmitz07@gmail.com">d.j.a.schmitz07@gmail.com</a></p>
+                <p><strong>Location:</strong> Serving Gillette, WY and surrounding areas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Gillette Wyoming Plumbing</h4>
+                <p>Your trusted partner for all residential and commercial plumbing needs in Gillette, Wyoming.</p>
+                <p>&copy; 2023 Gillette Wyoming Plumbing. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home" onclick="showSection('home'); return false;">Home</a>
+                <a href="#residential-plumbing-repair" onclick="showSection('residential-plumbing-repair'); return false;">Residential Plumbing Repair</a>
+                <a href="#commercial-plumbing-repair" onclick="showSection('commercial-plumbing-repair'); return false;">Commercial Plumbing Repair</a>
+                <a href="#water-heater-services" onclick="showSection('water-heater-services'); return false;">Water Heater Services</a>
+                <a href="#drain-cleaning-clog-removal" onclick="showSection('drain-cleaning-clog-removal'); return false;">Drain Cleaning & Clog Removal</a>
+                <a href="#sewer-line-services" onclick="showSection('sewer-line-services'); return false;">Sewer Line Services</a>
+                <a href="#pipe-repair-repiping" onclick="showSection('pipe-repair-repiping'); return false;">Pipe Repair & Repiping</a>
+                <a href="#fixture-installation-repair" onclick="showSection('fixture-installation-repair'); return false;">Fixture Installation & Repair</a>
+                <a href="#emergency-plumbing" onclick="showSection('emergency-plumbing'); return false;">Emergency Plumbing</a>
+                <a href="#gas-line-services" onclick="showSection('gas-line-services'); return false;">Gas Line Services</a>
+                <a href="#bathroom-kitchen-remodeling" onclick="showSection('bathroom-kitchen-remodeling'); return false;">Bathroom & Kitchen Remodeling</a>
+                <a href="#about" onclick="showSection('about'); return false;">About Us</a>
+                <a href="#reviews" onclick="showSection('reviews'); return false;">Reviews</a>
+                <a href="#contact" onclick="showSection('contact'); return false;">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:307-414-6029">307-414-6029</a></p>
+                <p>Email: <a href="mailto:d.j.a.schmitz07@gmail.com">d.j.a.schmitz07@gmail.com</a></p>
+                <p>Gillette, WY</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with passion for Gillette, Wyoming.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            const dropdownParent = document.querySelector('li.dropdown > .nav-link');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const reviewForm = document.getElementById('review-submission-form');
+            const existingReviewsList = document.getElementById('existing-reviews-list');
+
+            // Default reviews (can be expanded)
+            const defaultReviews = [
+                { name: "Emily S.", rating: 5, text: "Gillette Wyoming Plumbing quickly fixed our burst pipe during a cold snap. They were incredibly professional, efficient, and saved us from major water damage. Highly recommend their emergency services in Gillette!" },
+                { name: "David K.", rating: 5, text: "Had a persistent drain clog that other companies couldn't clear. Gillette Wyoming Plumbing came out, quickly identified the problem with their camera, and hydro-jetted it perfectly. Their attention to detail and commitment to quality is unmatched. Best plumbing company in Gillette, WY!" },
+                { name: "Jessica L.", rating: 5, text: "We used Gillette Wyoming Plumbing for our new restaurant's kitchen plumbing. The project was completed on time and within budget, including grease trap installation. The team was knowledgeable and very easy to work with. Excellent work!" },
+                { name: "Mark T.", rating: 4, text: "Good service overall. The water heater repair was done well, and the communication was clear. Would use them again for future plumbing needs." },
+                { name: "Samantha R.", rating: 5, text: "From the initial quote for our bathroom remodel plumbing to the final fixture installation, Gillette Wyoming Plumbing was fantastic. They explained everything thoroughly and delivered a beautiful, functional bathroom. So glad we chose them!" }
+            ];
+
+            // Function to render stars
+            function renderStars(rating) {
+                let stars = '';
+                for (let i = 0; i < 5; i++) {
+                    stars += (i < rating) ? '★' : '☆';
+                }
+                return stars;
+            }
+
+            // Function to load reviews from localStorage or use defaults
+            function loadReviews() {
+                const storedReviews = localStorage.getItem('gilletteWyPlumbingReviews');
+                return storedReviews ? JSON.parse(storedReviews) : defaultReviews;
+            }
+
+            // Function to save reviews to localStorage
+            function saveReviews(reviews) {
+                localStorage.setItem('gilletteWyPlumbingReviews', JSON.stringify(reviews));
+            }
+
+            // Function to display reviews
+            function displayReviews() {
+                const reviews = loadReviews();
+                existingReviewsList.innerHTML = '<h3>What Our Valued Customers Say</h3>'; // Clear existing
+                reviews.forEach(review => {
+                    const reviewItem = document.createElement('div');
+                    reviewItem.classList.add('review-item', 'interactive-element');
+                    reviewItem.innerHTML = `
+                        <div class="stars">${renderStars(review.rating)}</div>
+                        <p class="reviewer-name">${review.name}</p>
+                        <p class="review-text">"${review.text}"</p>
+                    `;
+                    existingReviewsList.appendChild(reviewItem);
+                });
+            }
+
+            // Function to show a specific section and hide others
+            window.showSection = function(sectionId) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+
+                // Update active class for navigation links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === sectionId) {
+                        link.classList.add('active');
+                    }
+                    // Also handle active state for parent dropdown if a sub-link is active
+                    if (link.closest('.dropdown') && link.closest('.dropdown').querySelector(`[data-section="${sectionId}"]`)) {
+                        link.closest('.dropdown').querySelector('.nav-link').classList.add('active');
+                    }
+                });
+
+                // Close mobile menu if open
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    // Also close mobile dropdowns
+                    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
+                }
+
+                // Scroll to the top of the main content area, accounting for fixed header
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+
+            // Event listeners for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const sectionId = this.getAttribute('data-section');
+                    if (sectionId === 'services-parent') { // Prevent direct navigation for dropdown parent
+                        e.preventDefault();
+                        // For mobile, toggle dropdown visibility
+                        if (window.innerWidth <= 768) {
+                            this.closest('.dropdown').classList.toggle('active');
+                        }
+                    } else {
+                        e.preventDefault();
+                        showSection(sectionId);
+                    }
+                });
+            });
+
+            // Hamburger menu toggle
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active'); // Keep this for potential icon animation if it were a div
+            });
+
+            // Initial load: show home section and display reviews
+            showSection('home');
+            displayReviews();
+
+            // Review form submission handler
+            reviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('reviewer-name').value;
+                const email = document.getElementById('reviewer-email').value; // Not used for display, but good to capture
+                const rating = parseInt(document.querySelector('input[name="rating"]:checked').value);
+                const message = document.getElementById('review-message').value;
+
+                if (name && rating && message) {
+                    const newReview = {
+                        name: name,
+                        rating: rating,
+                        text: message
+                    };
+
+                    const reviews = loadReviews();
+                    reviews.unshift(newReview); // Add new review to the beginning
+                    saveReviews(reviews);
+                    displayReviews(); // Re-render all reviews
+
+                    // Clear form
+                    reviewForm.reset();
+                    document.querySelectorAll('.star-rating input').forEach(input => input.checked = false);
+                } else {
+                    alert('Please fill in your name, rating, and review message.');
+                }
+            });
+
+            // Mouse movement effect for hero section (optional, for interactivity)
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX / window.innerWidth) * 20 - 10; // -10 to 10
+                    const y = (e.clientY / window.innerHeight) * 20 - 10; // -10 to 10
+                    hero.style.backgroundPosition = `${50 + x * 0.5}% ${50 + y * 0.5}%`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
